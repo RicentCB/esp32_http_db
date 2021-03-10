@@ -8,18 +8,17 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Custom -->
-    <link rel="stylesheet" href="view/css/style.css">
 
 </head>
 <body >
     <?php
-        if(!isset($_GET["view"])){
+        if(!isset($_GET["page"])){
             include "modules/home.php";
         }else{
-            switch ($_GET["view"]) {
+            switch ($_GET["page"]) {
                 case 'home':
                 case 'temp':
-                    include "modules/".$_GET["view"].".php"; break;
+                    include "modules/".$_GET["page"].".php"; break;
                 //Se solicita una pagina no especificada
                 default: 
                     include "modules/404.php"; break;
