@@ -15,6 +15,16 @@
     <?php
         if(!isset($_GET["view"])){
             include "modules/home.php";
+        }else{
+            switch ($_GET["view"]) {
+                case 'home':
+                case 'temp':
+                    include "modules/".$_GET["view"].".php"; break;
+                //Se solicita una pagina no especificada
+                default: 
+                    include "modules/404.php"; break;
+
+            }
         }
     ?>
 
