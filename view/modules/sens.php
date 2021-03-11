@@ -1,7 +1,8 @@
 <?php
     require_once("controller/sensor.controller.php");
-    if(isset($_GET["temp"])){
-        $valueTemp = $_GET["temp"];
+    // var_dump($_POST);
+    if(isset($_POST["temp"])){
+        $valueTemp = $_POST["temp"];
         $insert = SensorController::ctrInsert($valueTemp);
         echo $insert;
     }else{
