@@ -2,7 +2,7 @@
     require_once ("model/sensor.model.php");
 
     /*================================================
-        MODELO DE LA PAGINA SENSOR
+        CONTROLADOR DE LA PAGINA SENSOR
     ================================================*/
     class SensorController{
 
