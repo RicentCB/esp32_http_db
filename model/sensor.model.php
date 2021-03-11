@@ -19,8 +19,9 @@
             else   
                 return false;
         }
+        
         //Leer tabla de Registros
-        static public function mdlRead($item=NULL, $value=NULL){
+        static public function mdlRead($item, $value){
             $sql  = "SELECT * FROM register_temp reg ";
             
             if($item == null){

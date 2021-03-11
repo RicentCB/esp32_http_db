@@ -7,10 +7,16 @@
     class SensorController{
 
         //Insertar en tabla de Registro
-        static public function ctrInsert($value){
+        static public function ctrInsert(String $value){
             $value = (float) $value;
             $data = array("value"=>$value);
             $ans = SensorModel::mdlInsert($data);
-            echo $ans;
+            return $ans;
+        }
+
+        //Leer tabla de registros
+        static public function ctrRead(String $item=NULL, String $value=NULL){
+            $regs = SensorModel::mdlRead($item, $value);
+            return $regs;
         }
     }
